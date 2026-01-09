@@ -15,20 +15,6 @@
       <h1>mojibake</h1>
     </header>
 
-    <div class="toolbar">
-      <button data-style="bold" title="Bold (Ctrl+B)"><b>B</b></button>
-      <button data-style="italic" title="Italic (Ctrl+I)"><i>I</i></button>
-      <button data-style="boldItalic" title="Bold Italic"><b><i>BI</i></b></button>
-      <button data-style="strikethrough" title="Strikethrough (Ctrl+Shift+S)"><s>S</s></button>
-      <button data-style="underline" title="Underline (Ctrl+U)"><u>U</u></button>
-      <button data-style="monospace" title="Monospace"><span class="mono">&lt;/&gt;</span></button>
-      <button data-style="script" title="Script">𝓢</button>
-      <button data-style="fraktur" title="Fraktur">𝔉</button>
-      <button data-style="smallCaps" title="Small Caps">ꜱᴄ</button>
-      <button data-style="circled" title="Circled">Ⓒ</button>
-      <button data-style="fullwidth" title="Fullwidth">Ｆ</button>
-    </div>
-
     <div class="editor-section">
       <textarea 
         id="editor" 
@@ -38,7 +24,7 @@
     </div>
 
     <div class="button-row">
-      <button id="polish-btn" class="action-btn ai-btn" disabled title="Polish with AI (grammar, clarity, polish)">
+      <button id="polish-btn" class="action-btn ai-btn" disabled title="Polish with AI (grammar, clarity, style)">
         <svg class="sparkle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z"/>
           <path d="M5 19L5.54 16.26L8 16L5.54 15.74L5 13L4.46 15.74L2 16L4.46 16.26L5 19Z"/>
@@ -53,21 +39,13 @@
     <div id="toast" class="toast hidden">Copied!</div>
 
     <footer>
-      <p class="hint">Select text and click a style, or activate a style and start typing</p>
+      <p class="hint">Use AI to polish your writing for grammar, clarity, and style</p>
     </footer>
   </div>
 
-  <!-- Unicode processing library -->
-  <script src="../shared/unicode/maps/char-maps.js"></script>
-  <script src="../shared/unicode/maps/reverse-maps.js"></script>
-  <script src="../shared/unicode/graphemes.js"></script>
-  <script src="../shared/unicode/normalization.js"></script>
-  <script src="../shared/unicode/combining-marks.js"></script>
-  <script src="../shared/unicode/index.js"></script>
   <!-- AI service -->
   <script src="../shared/ai.js"></script>
   <!-- Application code -->
-  <script src="../shared/toolbar.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>
