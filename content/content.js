@@ -286,10 +286,7 @@ function createToolbar() {
       }
     }
 
-    .mojibake-long-press {
-      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4) !important;
-      transition: box-shadow 0.1s ease-out !important;
-    }
+
   `;
 
   document.head.appendChild(style);
@@ -404,9 +401,6 @@ function cancelLongPress() {
     clearTimeout(longPressTimer);
     longPressTimer = null;
   }
-  if (longPressTarget) {
-    longPressTarget.classList.remove('mojibake-long-press');
-  }
   longPressTarget = null;
   isLongPressing = false;
 }
@@ -420,8 +414,6 @@ function startLongPress(element) {
   cancelLongPress();
   longPressTarget = element;
   isLongPressing = true;
-  
-  element.classList.add('mojibake-long-press');
   
   longPressTimer = setTimeout(() => {
     if (longPressTarget === element) {
