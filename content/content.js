@@ -167,6 +167,21 @@ function createToolbar() {
       0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
       50% { transform: scale(1.2) rotate(15deg); opacity: 0.7; }
     }
+    @media (prefers-color-scheme: dark) {
+      .mojibake-toolbar-inner {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+      #mojibake-toolbar button {
+        background: #2a2a2a;
+        border-color: #444;
+        color: #ddd;
+      }
+      #mojibake-toolbar button:hover {
+        background: #3a3a3a;
+        border-color: #555;
+      }
+    }
   `;
   document.head.appendChild(style);
 
